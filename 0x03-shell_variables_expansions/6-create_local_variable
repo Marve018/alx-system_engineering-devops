@@ -1,2 +1,2 @@
 #!/bin/bash
-set alias BEST='School'
+BEST='School'
