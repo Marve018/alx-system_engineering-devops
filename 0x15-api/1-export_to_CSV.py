@@ -1,4 +1,4 @@
-#!/usr/thon3
+#!/usr/bin/python3
 """Gathring data from an API """
 
 from requests import get
