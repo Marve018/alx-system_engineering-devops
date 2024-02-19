@@ -7,14 +7,16 @@ import sys
 
 if __name__ == "__main__":
 
-    url = "https://jsonplaceholder.typicode.com/"
+    # url = "https://jsonplaceholder.typicode.com/"
 
     # retrive the employee data info
-    response = get(url + "users/{}".format(sys.argv[1]))
+    response = get("https://jsonplaceholder.typicode.com/users/{}"
+                   .format(sys.argv[1]))
     employee = response.json().get("usermame")
 
     # retrive todo list
-    response = get(url + "users/{}/todos".format(sys.argv[1]))
+    response = get("https://jsonplaceholder.typicode.com/users/{}/todos"
+                   .format(sys.argv[1]))
     todos = response.json()
 
     with open('{}.csv'.format(sys.argv[1]), 'w') as file:
